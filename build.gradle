@@ -26,6 +26,12 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+tasks.jar {
+	manifest {
+		attributes["Main-Class"] = "org.fabio.bank_api.BankApiApplication"
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
